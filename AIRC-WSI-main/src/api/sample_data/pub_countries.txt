@@ -1,0 +1,982 @@
+{
+  "took" : 462,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 12,
+    "successful" : 12,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 10000,
+      "relation" : "gte"
+    },
+    "max_score" : null,
+    "hits" : [ ]
+  },
+  "aggregations" : {
+    "my_agg" : {
+      "doc_count_error_upper_bound" : 0,
+      "sum_other_doc_count" : 0,
+      "buckets" : [
+        {
+          "key" : "China",
+          "doc_count" : 2523866
+        },
+        {
+          "key" : "United States",
+          "doc_count" : 2359379
+        },
+        {
+          "key" : "United Kingdom",
+          "doc_count" : 726253
+        },
+        {
+          "key" : "India",
+          "doc_count" : 703102
+        },
+        {
+          "key" : "Germany",
+          "doc_count" : 691028
+        },
+        {
+          "key" : "Japan",
+          "doc_count" : 515707
+        },
+        {
+          "key" : "France",
+          "doc_count" : 457899
+        },
+        {
+          "key" : "Italy",
+          "doc_count" : 433182
+        },
+        {
+          "key" : "Russian Federation",
+          "doc_count" : 400871
+        },
+        {
+          "key" : "Canada",
+          "doc_count" : 388721
+        },
+        {
+          "key" : "Australia",
+          "doc_count" : 361309
+        },
+        {
+          "key" : "Spain",
+          "doc_count" : 350550
+        },
+        {
+          "key" : "Korea, Republic of",
+          "doc_count" : 348020
+        },
+        {
+          "key" : "Brazil",
+          "doc_count" : 289054
+        },
+        {
+          "key" : "Iran, Islamic Republic of",
+          "doc_count" : 223964
+        },
+        {
+          "key" : "Netherlands",
+          "doc_count" : 207194
+        },
+        {
+          "key" : "Poland",
+          "doc_count" : 195509
+        },
+        {
+          "key" : "Switzerland",
+          "doc_count" : 165628
+        },
+        {
+          "key" : "Sweden",
+          "doc_count" : 155294
+        },
+        {
+          "key" : "Turkey",
+          "doc_count" : 154327
+        },
+        {
+          "key" : "Taiwan, Province of China",
+          "doc_count" : 153155
+        },
+        {
+          "key" : "Malaysia",
+          "doc_count" : 142836
+        },
+        {
+          "key" : "Belgium",
+          "doc_count" : 123867
+        },
+        {
+          "key" : "Portugal",
+          "doc_count" : 104038
+        },
+        {
+          "key" : "Czechia",
+          "doc_count" : 103374
+        },
+        {
+          "key" : "Indonesia",
+          "doc_count" : 101823
+        },
+        {
+          "key" : "Denmark",
+          "doc_count" : 101442
+        },
+        {
+          "key" : "Austria",
+          "doc_count" : 101331
+        },
+        {
+          "key" : "Mexico",
+          "doc_count" : 99182
+        },
+        {
+          "key" : "Saudi Arabia",
+          "doc_count" : 95843
+        },
+        {
+          "key" : "Singapore",
+          "doc_count" : 94223
+        },
+        {
+          "key" : "Hong Kong",
+          "doc_count" : 90379
+        },
+        {
+          "key" : "South Africa",
+          "doc_count" : 88987
+        },
+        {
+          "key" : "Finland",
+          "doc_count" : 83732
+        },
+        {
+          "key" : "Israel",
+          "doc_count" : 83090
+        },
+        {
+          "key" : "Norway",
+          "doc_count" : 82131
+        },
+        {
+          "key" : "Egypt",
+          "doc_count" : 79920
+        },
+        {
+          "key" : "Pakistan",
+          "doc_count" : 72577
+        },
+        {
+          "key" : "Greece",
+          "doc_count" : 71877
+        },
+        {
+          "key" : "Romania",
+          "doc_count" : 65789
+        },
+        {
+          "key" : "Thailand",
+          "doc_count" : 64790
+        },
+        {
+          "key" : "Ukraine",
+          "doc_count" : 59715
+        },
+        {
+          "key" : "New Zealand",
+          "doc_count" : 57481
+        },
+        {
+          "key" : "Argentina",
+          "doc_count" : 54153
+        },
+        {
+          "key" : "Chile",
+          "doc_count" : 53609
+        },
+        {
+          "key" : "Ireland",
+          "doc_count" : 53578
+        },
+        {
+          "key" : "Hungary",
+          "doc_count" : 46438
+        },
+        {
+          "key" : "Colombia",
+          "doc_count" : 44579
+        },
+        {
+          "key" : "Viet Nam",
+          "doc_count" : 36302
+        },
+        {
+          "key" : "Algeria",
+          "doc_count" : 35124
+        },
+        {
+          "key" : "Slovakia",
+          "doc_count" : 34570
+        },
+        {
+          "key" : "Tunisia",
+          "doc_count" : 34241
+        },
+        {
+          "key" : "Serbia",
+          "doc_count" : 30808
+        },
+        {
+          "key" : "Nigeria",
+          "doc_count" : 30163
+        },
+        {
+          "key" : "Morocco",
+          "doc_count" : 29038
+        },
+        {
+          "key" : "Iraq",
+          "doc_count" : 27998
+        },
+        {
+          "key" : "United Arab Emirates",
+          "doc_count" : 27177
+        },
+        {
+          "key" : "Slovenia",
+          "doc_count" : 26348
+        },
+        {
+          "key" : "Croatia",
+          "doc_count" : 25436
+        },
+        {
+          "key" : "Bangladesh",
+          "doc_count" : 22225
+        },
+        {
+          "key" : "Bulgaria",
+          "doc_count" : 20844
+        },
+        {
+          "key" : "Kazakhstan",
+          "doc_count" : 16051
+        },
+        {
+          "key" : "Lithuania",
+          "doc_count" : 15786
+        },
+        {
+          "key" : "Qatar",
+          "doc_count" : 15338
+        },
+        {
+          "key" : "Philippines",
+          "doc_count" : 15191
+        },
+        {
+          "key" : "Ecuador",
+          "doc_count" : 15012
+        },
+        {
+          "key" : "Jordan",
+          "doc_count" : 14898
+        },
+        {
+          "key" : "Estonia",
+          "doc_count" : 14410
+        },
+        {
+          "key" : "Cyprus",
+          "doc_count" : 10774
+        },
+        {
+          "key" : "Lebanon",
+          "doc_count" : 10681
+        },
+        {
+          "key" : "Peru",
+          "doc_count" : 9962
+        },
+        {
+          "key" : "Latvia",
+          "doc_count" : 9928
+        },
+        {
+          "key" : "Kenya",
+          "doc_count" : 9882
+        },
+        {
+          "key" : "Belarus",
+          "doc_count" : 9806
+        },
+        {
+          "key" : "Macao",
+          "doc_count" : 9746
+        },
+        {
+          "key" : "Ethiopia",
+          "doc_count" : 9724
+        },
+        {
+          "key" : "Luxembourg",
+          "doc_count" : 8937
+        },
+        {
+          "key" : "Ghana",
+          "doc_count" : 8259
+        },
+        {
+          "key" : "Sri Lanka",
+          "doc_count" : 7801
+        },
+        {
+          "key" : "Oman",
+          "doc_count" : 7293
+        },
+        {
+          "key" : "Kuwait",
+          "doc_count" : 6866
+        },
+        {
+          "key" : "Uruguay",
+          "doc_count" : 6448
+        },
+        {
+          "key" : "Georgia",
+          "doc_count" : 6141
+        },
+        {
+          "key" : "Cuba",
+          "doc_count" : 6140
+        },
+        {
+          "key" : "Iceland",
+          "doc_count" : 6007
+        },
+        {
+          "key" : "Venezuela, Bolivarian Republic of",
+          "doc_count" : 5634
+        },
+        {
+          "key" : "Armenia",
+          "doc_count" : 5397
+        },
+        {
+          "key" : "Azerbaijan",
+          "doc_count" : 5187
+        },
+        {
+          "key" : "Cameroon",
+          "doc_count" : 5180
+        },
+        {
+          "key" : "Tanzania, United Republic of",
+          "doc_count" : 4841
+        },
+        {
+          "key" : "Bosnia and Herzegovina",
+          "doc_count" : 4400
+        },
+        {
+          "key" : "Uganda",
+          "doc_count" : 4317
+        },
+        {
+          "key" : "Costa Rica",
+          "doc_count" : 4295
+        },
+        {
+          "key" : "Uzbekistan",
+          "doc_count" : 3962
+        },
+        {
+          "key" : "Nepal",
+          "doc_count" : 3648
+        },
+        {
+          "key" : "North Macedonia",
+          "doc_count" : 3493
+        },
+        {
+          "key" : "Sudan",
+          "doc_count" : 3190
+        },
+        {
+          "key" : "Palestine, State of",
+          "doc_count" : 3057
+        },
+        {
+          "key" : "Zimbabwe",
+          "doc_count" : 2996
+        },
+        {
+          "key" : "Malta",
+          "doc_count" : 2855
+        },
+        {
+          "key" : "Puerto Rico",
+          "doc_count" : 2808
+        },
+        {
+          "key" : "Panama",
+          "doc_count" : 2614
+        },
+        {
+          "key" : "Senegal",
+          "doc_count" : 2465
+        },
+        {
+          "key" : "Botswana",
+          "doc_count" : 2354
+        },
+        {
+          "key" : "Moldova, Republic of",
+          "doc_count" : 2310
+        },
+        {
+          "key" : "Brunei Darussalam",
+          "doc_count" : 2259
+        },
+        {
+          "key" : "Bahrain",
+          "doc_count" : 2105
+        },
+        {
+          "key" : "Yemen",
+          "doc_count" : 1966
+        },
+        {
+          "key" : "Montenegro",
+          "doc_count" : 1924
+        },
+        {
+          "key" : "Libya",
+          "doc_count" : 1882
+        },
+        {
+          "key" : "Syrian Arab Republic",
+          "doc_count" : 1773
+        },
+        {
+          "key" : "Myanmar",
+          "doc_count" : 1767
+        },
+        {
+          "key" : "Benin",
+          "doc_count" : 1763
+        },
+        {
+          "key" : "Mongolia",
+          "doc_count" : 1756
+        },
+        {
+          "key" : "Albania",
+          "doc_count" : 1648
+        },
+        {
+          "key" : "Namibia",
+          "doc_count" : 1546
+        },
+        {
+          "key" : "Zambia",
+          "doc_count" : 1532
+        },
+        {
+          "key" : "Malawi",
+          "doc_count" : 1525
+        },
+        {
+          "key" : "Burkina Faso",
+          "doc_count" : 1513
+        },
+        {
+          "key" : "Mauritius",
+          "doc_count" : 1511
+        },
+        {
+          "key" : "Côte d'Ivoire",
+          "doc_count" : 1465
+        },
+        {
+          "key" : "Fiji",
+          "doc_count" : 1465
+        },
+        {
+          "key" : "Trinidad and Tobago",
+          "doc_count" : 1410
+        },
+        {
+          "key" : "Cambodia",
+          "doc_count" : 1226
+        },
+        {
+          "key" : "Madagascar",
+          "doc_count" : 1217
+        },
+        {
+          "key" : "Jamaica",
+          "doc_count" : 1214
+        },
+        {
+          "key" : "Mozambique",
+          "doc_count" : 1189
+        },
+        {
+          "key" : "Bolivia, Plurinational State of",
+          "doc_count" : 1187
+        },
+        {
+          "key" : "Rwanda",
+          "doc_count" : 1169
+        },
+        {
+          "key" : "Congo",
+          "doc_count" : 1000
+        },
+        {
+          "key" : "Kyrgyzstan",
+          "doc_count" : 947
+        },
+        {
+          "key" : "Paraguay",
+          "doc_count" : 932
+        },
+        {
+          "key" : "Lao People's Democratic Republic",
+          "doc_count" : 868
+        },
+        {
+          "key" : "Mali",
+          "doc_count" : 803
+        },
+        {
+          "key" : "Guatemala",
+          "doc_count" : 750
+        },
+        {
+          "key" : "Korea, Democratic People's Republic of",
+          "doc_count" : 695
+        },
+        {
+          "key" : "Afghanistan",
+          "doc_count" : 685
+        },
+        {
+          "key" : "New Caledonia",
+          "doc_count" : 680
+        },
+        {
+          "key" : "Papua New Guinea",
+          "doc_count" : 669
+        },
+        {
+          "key" : "Tajikistan",
+          "doc_count" : 637
+        },
+        {
+          "key" : "Gabon",
+          "doc_count" : 576
+        },
+        {
+          "key" : "French Polynesia",
+          "doc_count" : 557
+        },
+        {
+          "key" : "Niger",
+          "doc_count" : 549
+        },
+        {
+          "key" : "Dominican Republic",
+          "doc_count" : 543
+        },
+        {
+          "key" : "Honduras",
+          "doc_count" : 535
+        },
+        {
+          "key" : "Monaco",
+          "doc_count" : 503
+        },
+        {
+          "key" : "Liechtenstein",
+          "doc_count" : 493
+        },
+        {
+          "key" : "Congo, The Democratic Republic of the",
+          "doc_count" : 457
+        },
+        {
+          "key" : "Togo",
+          "doc_count" : 451
+        },
+        {
+          "key" : "Bhutan",
+          "doc_count" : 439
+        },
+        {
+          "key" : "Greenland",
+          "doc_count" : 433
+        },
+        {
+          "key" : "Barbados",
+          "doc_count" : 418
+        },
+        {
+          "key" : "Eswatini",
+          "doc_count" : 413
+        },
+        {
+          "key" : "El Salvador",
+          "doc_count" : 400
+        },
+        {
+          "key" : "Angola",
+          "doc_count" : 377
+        },
+        {
+          "key" : "Nicaragua",
+          "doc_count" : 352
+        },
+        {
+          "key" : "Gambia",
+          "doc_count" : 326
+        },
+        {
+          "key" : "Faroe Islands",
+          "doc_count" : 320
+        },
+        {
+          "key" : "Sierra Leone",
+          "doc_count" : 306
+        },
+        {
+          "key" : "French Guiana",
+          "doc_count" : 288
+        },
+        {
+          "key" : "Grenada",
+          "doc_count" : 282
+        },
+        {
+          "key" : "Bahamas",
+          "doc_count" : 264
+        },
+        {
+          "key" : "Burundi",
+          "doc_count" : 237
+        },
+        {
+          "key" : "Guinea",
+          "doc_count" : 232
+        },
+        {
+          "key" : "Seychelles",
+          "doc_count" : 223
+        },
+        {
+          "key" : "Saint Kitts and Nevis",
+          "doc_count" : 204
+        },
+        {
+          "key" : "Haiti",
+          "doc_count" : 191
+        },
+        {
+          "key" : "Lesotho",
+          "doc_count" : 186
+        },
+        {
+          "key" : "Mauritania",
+          "doc_count" : 184
+        },
+        {
+          "key" : "Guam",
+          "doc_count" : 182
+        },
+        {
+          "key" : "Guadeloupe",
+          "doc_count" : 177
+        },
+        {
+          "key" : "Liberia",
+          "doc_count" : 176
+        },
+        {
+          "key" : "Bermuda",
+          "doc_count" : 167
+        },
+        {
+          "key" : "Cabo Verde",
+          "doc_count" : 158
+        },
+        {
+          "key" : "Chad",
+          "doc_count" : 157
+        },
+        {
+          "key" : "Central African Republic",
+          "doc_count" : 156
+        },
+        {
+          "key" : "Guyana",
+          "doc_count" : 152
+        },
+        {
+          "key" : "Solomon Islands",
+          "doc_count" : 144
+        },
+        {
+          "key" : "Belize",
+          "doc_count" : 141
+        },
+        {
+          "key" : "Suriname",
+          "doc_count" : 134
+        },
+        {
+          "key" : "Vanuatu",
+          "doc_count" : 133
+        },
+        {
+          "key" : "Falkland Islands (Malvinas)",
+          "doc_count" : 131
+        },
+        {
+          "key" : "Eritrea",
+          "doc_count" : 125
+        },
+        {
+          "key" : "San Marino",
+          "doc_count" : 124
+        },
+        {
+          "key" : "Maldives",
+          "doc_count" : 123
+        },
+        {
+          "key" : "Réunion",
+          "doc_count" : 121
+        },
+        {
+          "key" : "Timor-Leste",
+          "doc_count" : 113
+        },
+        {
+          "key" : "Samoa",
+          "doc_count" : 112
+        },
+        {
+          "key" : "Guinea-Bissau",
+          "doc_count" : 106
+        },
+        {
+          "key" : "Martinique",
+          "doc_count" : 99
+        },
+        {
+          "key" : "Somalia",
+          "doc_count" : 98
+        },
+        {
+          "key" : "Dominica",
+          "doc_count" : 83
+        },
+        {
+          "key" : "Djibouti",
+          "doc_count" : 66
+        },
+        {
+          "key" : "Palau",
+          "doc_count" : 66
+        },
+        {
+          "key" : "Cayman Islands",
+          "doc_count" : 64
+        },
+        {
+          "key" : "Turkmenistan",
+          "doc_count" : 64
+        },
+        {
+          "key" : "Andorra",
+          "doc_count" : 62
+        },
+        {
+          "key" : "Micronesia, Federated States of",
+          "doc_count" : 59
+        },
+        {
+          "key" : "Tonga",
+          "doc_count" : 56
+        },
+        {
+          "key" : "Equatorial Guinea",
+          "doc_count" : 51
+        },
+        {
+          "key" : "Comoros",
+          "doc_count" : 49
+        },
+        {
+          "key" : "Antigua and Barbuda",
+          "doc_count" : 48
+        },
+        {
+          "key" : "American Samoa",
+          "doc_count" : 43
+        },
+        {
+          "key" : "Virgin Islands, U.S.",
+          "doc_count" : 42
+        },
+        {
+          "key" : "Holy See (Vatican City State)",
+          "doc_count" : 36
+        },
+        {
+          "key" : "Aruba",
+          "doc_count" : 34
+        },
+        {
+          "key" : "South Sudan",
+          "doc_count" : 34
+        },
+        {
+          "key" : "Cook Islands",
+          "doc_count" : 31
+        },
+        {
+          "key" : "Marshall Islands",
+          "doc_count" : 29
+        },
+        {
+          "key" : "Saint Lucia",
+          "doc_count" : 28
+        },
+        {
+          "key" : "Saint Vincent and the Grenadines",
+          "doc_count" : 28
+        },
+        {
+          "key" : "Gibraltar",
+          "doc_count" : 26
+        },
+        {
+          "key" : "Saint Helena, Ascension and Tristan da Cunha",
+          "doc_count" : 26
+        },
+        {
+          "key" : "Turks and Caicos Islands",
+          "doc_count" : 26
+        },
+        {
+          "key" : "Kiribati",
+          "doc_count" : 25
+        },
+        {
+          "key" : "Northern Mariana Islands",
+          "doc_count" : 25
+        },
+        {
+          "key" : "Virgin Islands, British",
+          "doc_count" : 25
+        },
+        {
+          "key" : "Svalbard and Jan Mayen",
+          "doc_count" : 23
+        },
+        {
+          "key" : "Anguilla",
+          "doc_count" : 21
+        },
+        {
+          "key" : "Sao Tome and Principe",
+          "doc_count" : 17
+        },
+        {
+          "key" : "Tuvalu",
+          "doc_count" : 11
+        },
+        {
+          "key" : "British Indian Ocean Territory",
+          "doc_count" : 10
+        },
+        {
+          "key" : "Montserrat",
+          "doc_count" : 10
+        },
+        {
+          "key" : "Antarctica",
+          "doc_count" : 8
+        },
+        {
+          "key" : "Mayotte",
+          "doc_count" : 8
+        },
+        {
+          "key" : "Nauru",
+          "doc_count" : 8
+        },
+        {
+          "key" : "South Georgia and the South Sandwich Islands",
+          "doc_count" : 8
+        },
+        {
+          "key" : "United States Minor Outlying Islands",
+          "doc_count" : 7
+        },
+        {
+          "key" : "Curaçao",
+          "doc_count" : 5
+        },
+        {
+          "key" : "Tokelau",
+          "doc_count" : 4
+        },
+        {
+          "key" : "Western Sahara",
+          "doc_count" : 4
+        },
+        {
+          "key" : "Norfolk Island",
+          "doc_count" : 3
+        },
+        {
+          "key" : "Wallis and Futuna",
+          "doc_count" : 3
+        },
+        {
+          "key" : "Bouvet Island",
+          "doc_count" : 2
+        },
+        {
+          "key" : "Niue",
+          "doc_count" : 2
+        },
+        {
+          "key" : "Christmas Island",
+          "doc_count" : 1
+        },
+        {
+          "key" : "French Southern Territories",
+          "doc_count" : 1
+        },
+        {
+          "key" : "Heard Island and McDonald Islands",
+          "doc_count" : 1
+        },
+        {
+          "key" : "Pitcairn",
+          "doc_count" : 1
+        }
+      ]
+    }
+  }
+}

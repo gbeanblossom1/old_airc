@@ -1,0 +1,9 @@
+# All necessary python packages to be downloaded
+elasticsearch
+flask
+numpy
+pandas
+pudb
+pytest
+gensim
+nltk

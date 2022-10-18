@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acqui-Beacon(Name is not final)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+  <style>input.form-control { width: 480px!important}</style>
+  <style>
+  .navbar-custom {background-color: rgb(134, 31, 65);}
+  .navbar-custom .navbar-brand, .navbar-custom .navbar-text{color: rgb(255, 255, 255);} 
+  </style> 
+  <style>.btn-custom {background-color: rgb(198, 70, 0)!important}</style>
+  <style>nav .navbar-nav li a{color: white !important}</style>
+  <style>table, th, td {border:1px solid black; width: auto!important;}</style>
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md navbar-custom">
+    <a class="navbar-brand" href="index.html">Acqui-Beacon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  
+  <!-- Search Bar -->
+  <section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row">
+                <div class="col-12 offset-0 text-center">
+                    <div class="info-form p-5">
+                        <form action="" class="form-inline justify-content-center">
+                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="sQuery">
+                              <button class="btn btn-light btn-custom my-sm-0 " type="submit" id="searchSubmit">
+                                <i class="fas fa-search text-light"></i>
+                              </button>
+                              <button class="btn btn-light btn-custom my-sm-0" type="button" id="download" title="Export Data">
+                                <!--Light-->
+                                <i class="fas fa-download text-light"></i>
+                                <!--Dark-->
+                                <!-- <i class="fas fa-download text-light"></i> -->
+                              </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Table for search results -->
+    <div class="table-responsive" style="display:none" id="sql_search_results_table">
+      <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Number of Files</th>
+                  <th>Date Uploaded</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody id="sql_search_results_table_body">
+          </tbody>
+      </table>
+  </div>
+  </section>
+
+    <!-- Graph -->
+  <section id="graphs">
+    <div id="container" class="container">
+      <div class='row'>
+        <div class="column mx-auto">
+          <table id="vendorTable" class="table"></table> <!-- Table to hold SEI number, vendor, PIIDs, amount of money obligated, time of last obligation-->
+          <table id="naicsTable" class="table"></table> <!-- Top 25 NAICS descriptions-->
+          <canvas id="commercialPie"></canvas> <!-- Commercial items vs not-->
+        </div>
+        <div class="column p-5 form-inline justify-content-end"> 
+          <canvas id="vendorBar"></canvas> <!-- Top 5 SEI numbers (Displayed as vendors) by number of unique PIIDs-->
+          <canvas id="naicsBar"></canvas> <!-- Top 5 unique PIIDs with NAICS descriptions-->     
+          <canvas id="oblBar"></canvas> <!-- Dollars Obligated by Organization-->
+          <canvas id="darpaLine"></canvas> <!-- Dollars Obligated by Fiscal Year-->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- results page-->
+  <section id="results">
+  </section>
+
+  <!-- Graph JS Links -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="{{ url_for('static', filename='js/search_charts.js') }}"></script>
+  <!-- Search JS-->
+  <script>
+    searchSubmit.addEventListener('click', searchFunc);
+    function searchFunc(event) {
+      event.preventDefault();
+      
+      var queryValue = document.getElementById('sQuery').value;
+      if (queryValue === null || queryValue === '') return;
+
+      const searchUrl = {{(url_root + url_for("query.sql_search")) | tojson}};
+      performSearch(searchUrl, queryValue);
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</script>

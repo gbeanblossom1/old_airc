@@ -1,0 +1,5 @@
+{
+    "ES_HOST": "string: The IP address of the elasticsearch instance",
+	"ES_PORT": "integer: The port of the elasticsearch instance",
+	"MAX_PAGE_SIZE": "integer: The maximum number of results a search request can return per request. Must be <= 10000"
+}

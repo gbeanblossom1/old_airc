@@ -1,0 +1,38 @@
+# Docker file for a Ubuntu-based Python3 image
+FROM ubuntu:20.04
+
+#Set Locales
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+
+#Settings
+ENV PYTHONPATH=${PYTHONPATH}:/opt/elastipy:/opt/tb_wsi/:/opt/tb_wsi/tb_api/:/opt/models
+EXPOSE 5010
+WORKDIR /opt/tb_wsi/
+VOLUME /opt/elastipy/
+VOLUME /opt/vector_model/
+
+# Install python 3, deps and gunicorn
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y python3-pip python3-dev locales locales-all git \
+  && pip3 install --upgrade pip \
+  && pip3 install gunicorn
+
+#Copy over the src dir
+COPY src/ /opt/tb_wsi/
+
+# Install python packages
+RUN pip3 install -r /opt/tb_wsi/requirements.txt
+RUN pip3 install --upgrade cython
+
+# Download nltk stopwords
+RUN python3 /opt/tb_wsi/nltk_download.py
+
+#Install sent2vec
+RUN pip3 install git+https://github.com/epfml/sent2vec.git
+
+ENTRYPOINT ["/usr/local/bin/gunicorn", "-w", "4", "-b", "0.0.0.0:5010", "--timeout", "300", "tb_api:create_app()"]
+
+#CMD ["python3", "-m", "http.server"]

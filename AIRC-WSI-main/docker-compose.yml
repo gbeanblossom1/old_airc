@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+
+  tb_api:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+
+    image: tb_wsi
+    container_name: tb_wsi
+    volumes:
+      - type: bind
+        source: ${TB_CONF}
+        target: /opt/config/tb_config.json
+      - type: bind
+        source: ${EPLIB_DIR}
+        target: /opt/elastipy/
+      - type: bind
+        source: ${MODEL_DIR}
+        target: /opt/models/
+      - type: bind
+        source: ${MODEL_FILE}
+        target: /opt/vector_model/wiki_unigrams.bin
+    ports:
+      - "5010:5010"
+    restart: always
+
+networks:
+  default:
+    external:
+      name: elastic

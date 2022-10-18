@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVM Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>input.form-control { width: 480px!important}</style>
+  <style>
+  .navbar-custom {background-color: rgb(134, 31, 65);}
+  .navbar-custom .navbar-brand, .navbar-custom .navbar-text{color: rgb(255, 255, 255);} 
+  </style> 
+  <style>.btn-custom {background-color: rgb(198, 70, 0)!important}</style>
+  <style>nav .navbar-nav li a{color: white!important}</style>
+  <style>{box-sizing: border-box;}.column {width: 45%; align-items: center;}.row:after {content: "";display: table;clear: both;}</style>
+  <style>table, th, td {border:1px solid black; width: 300px!important; white-space: nowrap;}</style>
+  <style>body{padding-bottom: 50px}</style>
+  <style>.no-italics{font-style: normal;}</style>
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md navbar-custom">
+    <a class="navbar-brand" href="{{ url_for('views.view_search') }}">DARCIE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="{{ url_for('views.view_search') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('views.view_evmForm') }}">EVM Request</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="info-form p-5">
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScih1TguQJjGsorf2COgGQF8w4U9hSeQpLeh5RSSI_SBO79jg/formResponse" class="info-form">
+      <div>
+        <label><strong>What is your name?</strong></label>
+        <input type="text" name="entry.732585687" required placeholder="Name" />
+      </div>
+
+      <div>
+        <label><strong>What is your email?</strong></label>
+        <input type="text" name="entry.1627088137" required placeholder="Email" />
+      </div>
+
+      <div>
+        <label><strong>The query will be run over what time period?</strong></label>
+        <input type="text" name="entry.583689752" required placeholder="Date Range" />
+      </div>
+      
+      <div>
+        <label><strong>How frequently do you want values to be reported?</strong></label>
+          <div>
+            <ul><input type="radio" id="Annual" name="entry.721018267" value="Annual" />
+            <label for="Annual">Annual</label>
+        
+            <input type="radio" id="Quarterly" name="entry.721018267" value="Quarterly" />
+            <label for="Quarterly">Quarterly</label>
+          
+            <input type="radio" id="Monthly" name="entry.721018267" value="Monthly" />
+            <label for="Monthly">Monthly</label></ul>
+          </div>  
+      </div>
+
+      <div>
+        <label><strong>How do you want to filter your data?</strong></label>
+          <div>
+            <ul><input type="radio" id="by_service" name="entry.1404179977" value="By Service" />
+            <label for="by_service">By Service</label>
+        
+            <input type="radio" id="by_commodity" name="entry.1404179977" value="By Commodity" />
+            <label for="by_commodity">By Commodity</label>
+          
+            <input type="radio" id="By_ACAT" name="entry.1404179977" value="By ACAT" />
+            <label for="By_ACAT">By ACAT</label></ul>
+          </div>
+      </div>
+
+      <div>
+        <label><strong>What groups in that category would you like values for?</strong></label>
+        <input type="text" name="entry.1976040290" required placeholder="Groups" />
+      </div>
+
+      <div class="">
+        <label for=""><strong>What variables would you like included?</strong></label>
+        <ul>
+          <input type="radio" id="CPI" name="entry.289224790" value="CPI" />
+          <label for="CPI">CPI</label><br />
+          
+          <input type="radio" id="SPI" name="entry.289224790" value="SPI" />
+          <label for="SPI">SPI</label><br />
+
+          <input type="radio" id="Contractor" name="entry.289224790" value="Contractor VAC" />
+          <label for="Contractor">Contractor VAC</label><br />
+
+          <input type="radio" id="Project" name="entry.289224790" value="Project Manager VAC" />
+          <label for="Project">Project Manager VAC</label><br />
+        </ul>
+      </div>
+
+      <div class="">
+        <label for=""><strong>How would you like the values summarized?</strong></label>
+        <ul>
+          <input type="radio" id="mean" name="entry.929145563" value="mean" />
+          <label for="mean">Mean</label><br />
+
+          <input type="radio" id="median" name="entry.929145563" value="median" />
+          <label for="median">Median</label><br />
+
+          <input type="radio" id="sum" name="entry.929145563" value="Sum" />
+          <label for="sum">Sum</label><br />
+
+          <input type="radio" id="maximum" name="entry.929145563" value="maximum" />
+          <label for="maximum">Maximum</label><br />
+
+          <input type="radio" id="minimum" name="entry.929145563" value="minimum" />
+          <label for="minimum">Minimum</label><br />
+          
+          <input type="radio" id="deviation" name="entry.929145563" value="Standard Deviation" />
+          <label for="deviation">Standard Deviation</label><br />
+
+          <input type="radio" id="variance" name="entry.929145563" value="variance" />
+          <label for="variance">Variance</label><br />
+
+          <input type="radio" id="percentile" name="entry.929145563" value="percentile" />
+          <label for="percentile">Percentile</label><br />
+          
+          <input type="radio" id="count" name="entry.929145563" value="count" />
+          <label for="count">Count</label><br />
+        </ul>
+      </div>
+
+      <div class="">
+        <label><strong>If percentile, what percentile??</strong></label>
+        <input type="text" name="entry.397434364" required placeholder="Percentile" />
+      </div>
+
+      <div class="">
+        <label><strong>If count, what values would you like to count?</strong></label>
+        <input type="text" name="entry.183712855" required placeholder="Count" />
+      </div>
+
+      <div class="">
+        <label><strong>What percentage of your privacy budget would you like to use?</strong></label>
+        <input type="text" name="entry.429047928" required placeholder="Percentage" />
+      </div>
+
+      <button type="submit" class="btn btn-light btn-custom my-sm-0">
+        <i class="text-light no-italics">Submit Form</i>
+      </button>
+    </form>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</script>

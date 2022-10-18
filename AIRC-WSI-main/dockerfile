@@ -1,0 +1,30 @@
+# Docker file for a Ubuntu-based Python3 image
+FROM ubuntu:20.04
+
+#Set Locales
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+
+#Flask Settings
+ENV FLASK_APP=/opt/tb_wsi/tb_api/
+ENV FLASK_ENV=development
+ENV PYTHONPATH=${PYTHONPATH}:/opt/elastipy
+WORKDIR /opt/tb_wsi/
+VOLUME /opt/tb_wsi
+VOLUME /opt/elastipy
+
+# Install python 3
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y python3-pip python3-dev locales locales-all \
+    && pip3 install --upgrade pip
+
+#Copy over the requirements file
+COPY src/requirements.txt /opt/tb_wsi/requirements.txt
+
+# Install python packages
+RUN pip3 install -r /opt/tb_wsi/requirements.txt
+
+EXPOSE 5010
+ENTRYPOINT ["/usr/bin/python3", "-m", "flask", "run", "--host=0.0.0.0", "-p", "5010" ]
